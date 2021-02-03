@@ -5,7 +5,7 @@ var config      = require('config'),
 
 var app = restify.createServer()
 
-app.use(restify.queryParser())
+app.use(restify.plugins.queryParser());
 app.use(restify.CORS())
 app.use(restify.fullResponse())
 
