@@ -1,10 +1,10 @@
+process.EventEmitter = require('events').EventEmitter; // add this line
 var config      = require('config'),
     restify     = require('restify'),
     api         = require('./routes/api'),
     fs          = require('fs')
 
 var app = restify.createServer()
-
 app.use(restify.plugins.queryParser());
 app.use(restify.CORS())
 app.use(restify.fullResponse())
